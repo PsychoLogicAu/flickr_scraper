@@ -38,6 +38,7 @@ def get_urls(search="honeybees on flowers", n=10, download=False):
                     url = f"https://farm{photo.get('farm')}.staticflickr.com/{photo.get('server')}/{photo.get('id')}_{photo.get('secret')}_b.jpg"
 
                 if download:
+                    print(f"downloading {url}")
                     download_uri(url, dir_path)
 
                 urls.append(url)
