@@ -18,6 +18,7 @@ def download_uri(uri, dir="./"):
 
     # Rename (remove wildcard characters)
     src = f  # original name
+    print(f"src: {src}")
     for c in ["%20", "%", "*", "~", "(", ")"]:
         f = f.replace(c, "_")
     f = f[: f.index("?")] if "?" in f else f  # new name

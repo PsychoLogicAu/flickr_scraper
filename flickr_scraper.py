@@ -42,8 +42,8 @@ def get_urls(search="honeybees on flowers", n=10, download=False):
 
                 urls.append(url)
                 print(f"{i}/{n} {url}")
-            except Exception:
-                print(f"{i}/{n} error...")
+            except Exception as e:
+                print(f"{i}/{n} error...: {e}")
 
         else:
             print(f"Done. ({time.time() - t:.1f}s)" + (f"\nAll images saved to {dir_path}" if download else ""))
