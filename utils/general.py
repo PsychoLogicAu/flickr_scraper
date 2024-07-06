@@ -12,7 +12,7 @@ def download_uri(uri, dir="./"):
     """Downloads file from URI, performing checks and renaming; supports timeout and image format suffix addition."""
 
     # Download
-    f = str(dir) + os.path.basename(uri)  # filename
+    f = str(dir) + "/" + os.path.basename(uri)  # filename
     with open(f, "wb") as file:
         file.write(requests.get(uri, timeout=10).content)
 
